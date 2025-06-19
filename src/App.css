@@ -1,8 +1,9 @@
-@font-face{
+@font-face {
   font-family: futura;
-  src:url('../src/assets/font/Futura-Bold.ttf');
+  src: url('../src/assets/font/Futura-Bold.ttf');
 }
-  * {
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,93 +15,201 @@ body {
   width: 100%;
 }
 
+/* index.css or App.css */
+
 #main {
-  background-color: black;
-  height: 12vh;
-  width: 100%;
   position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-#header {
-  background-color: white;
+#main::before {
+  content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 98%;  /* adjust width as needed */
-  height: 80%; /* adjust height as needed */
+  left: 10;
+  width: 100%;
+  height: 100%;
+  background-image: url('/mainbg.jpg');
+  background-size: cover;
+  /* ✅ stretches image to fill full container */
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+#main.clicked::before {
+  opacity: 1;
+}
+
+
+/* Header start */
+.header {
+  height: 13vh;
+  width: 100vw;
+  padding-top: 5.5vh;
+  padding-left: 6vw;
+  padding-right: 10vw;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  border-radius: 8px; /* optional: makes it look nicer */
+  background-color: transparent;
+  color: #03327d;
+  font-size: larger;
 }
-#header h1{
-  margin-left: 4vw;
-  font-size: 4vh;
-  font-family:sans-serif;
-}
-#menu ul{
-  display: flex;
-  list-style: none;
-  gap: 3vw;
-  margin-right: 16vw;
-}
-#menu ul li{
-  font-size: 1.6rem;
-  text-align:right;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+.logo {
+  max-width: fit-content;
+  line-height: 19px;
+  font-family: Georgia, 'Times New Roman', Times, serif
 }
-/* Body */
-#maincontent{
-  background-color: bisque;
-  min-height: 100vh;
-   width: 100vw;
 
+.logo h1 {
+  font-size: 3rem;
 }
-#mainhead h1{
-text-align: center;
-font-size: 12vh;
-font-family: futura;
-line-height: 3vw;
-letter-spacing: -8px;
- padding-top: 8vh;
-}
-#video{   
-     margin: 3vh;
- 
-}
-#video video{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-      align-items: center;
-  justify-content: center;
-}
-#explorebutton{
+
+.logo h4 {
+  font-size: 2rem;
   text-align: center;
 }
-#explorebutton button{
-  padding: 4px;
-   background-color:white;
-  color: rgb(236, 122, 40);
-  border: 3px solid;
-  border-color: rgb(229, 124, 12);
-  border-radius: 8px;
-  cursor: pointer;
+
+.navheader {
+  justify-content: space-between;
+
+}
+
+.navlink {
+  display: flex;
+  justify-content: center;
+  gap: 3.9vw;
+  list-style: none;
+  font-size: 1.7rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 550;color: white;
+
+}
+
+/* Header ends */
+
+/* Body  start*/
+#companyname {
+  color:rgb(153, 90, 8);      /* different color */
+  font-weight: 800;    /* bolder */
+  font-style:oblique; /* optional */
+  font-size: 3.6rem;     /* slightly bigger if needed */
+  letter-spacing: 1px; /* optional spacing */
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  width: 100vw;
+  min-height: auto;
+}
+
+.main-divide {
+  padding: 10rem 2rem 4rem 9rem;
+}
+.main-left{
+  padding-top: 8%;
+
+}
+/* Fix this */
+.main-divide h4 {
+  color: black;
+  padding-left: 2vw;
+  text-align: left;
+  font-weight: 900;
+  font-size: 4.5rem;
+  line-height: 5rem;
+  font-family: 'futura';
+}
+
+/* Keep flex ONLY for h6 if needed */
+.main-divide h6 {
+  margin-top: 2vh;
+  font-weight: 600;
+  font-size: 2.2vh;
+  line-height: 1.9vh;
+  letter-spacing: -1px;
+  color: black;
+  padding-left: 2vw;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+#productbutton {
+  margin-top: 4vh;
+  width: 100%;
+  margin-left: 9vw;
+}
+
+#productbutton button {
+  min-width: 14vw;
+  justify-items: center;
+  background-color: orangered;
+   border-radius: 8px;
+}
+
+#productbutton h4 {
+  color: white;
+  font-size: xx-large;
+  font-family: 'futura';
+  font-weight: 900;
+ 
+  justify-items: center;
+  text-align: center;
   align-items: center;
-  transition: 0.3s ease;
-  margin-bottom: 5vh;
 }
-#explorebutton button h4{
-  border-radius: 8px;
-   font-size: 2rem;         /* large text */
-  padding: 1rem 3rem;   
-  border: 3px solid;
-  border-color: rgb(229, 124, 12);
+
+#video {
+  display: flex;
+  flex: 1;
+  height: 140%;
+  width: 140%;
+  margin-top: -50px;
+  object-fit: cover;
+  border-radius: 4%;
 }
+
+/* body end */
+/* choose us start*/
+.choose-main{
+  width: 100vw;
+  min-height: 70vh;
+}
+.choose-div{
+  display: inline-flex;
+  gap: 2%;
+  padding: 8vh 6vw 2vh 4vw;
+  max-width: fit-content;
+  height: 100%;
+  background-color: #E7FBE6;
+
+}
+.choose-left{
+flex: 1;
+font-size: 10rem;
+}
+.choose-right{
+  flex: 1;
+  padding: 8vh 5vw 0vh 5vw;
+  
+}
+.choose-right p{
+  color: #A28B55;
+margin-bottom: 2.8%;
+font-size: 2.4rem;
+  letter-spacing: 3px;
+  font-weight: 900;
+}
+/* choose us end */
 /* grain wise */
 .grainwise-container {
   font-family: sans-serif;
@@ -122,8 +231,8 @@ letter-spacing: -8px;
 }
 
 .section-title {
-  color:rgb(68, 255, 0);
-  
+  color: rgb(68, 255, 0);
+
   text-align: center;
   font-size: 4.5rem;
   margin: 190px 0 30px;
@@ -142,13 +251,13 @@ letter-spacing: -8px;
   padding: 24px;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease;
 }
 
 .benefit-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .benefit-icon {
@@ -156,10 +265,21 @@ letter-spacing: -8px;
   margin-bottom: 10px;
 }
 
-.green { color: #16a34a; }
-.yellow { color: #facc15; }
-.blue { color: #3b82f6; }
-.gray { color: #6b7280; }
+.green {
+  color: #16a34a;
+}
+
+.yellow {
+  color: #facc15;
+}
+
+.blue {
+  color: #3b82f6;
+}
+
+.gray {
+  color: #6b7280;
+}
 
 .taste-goodness-section {
   background-color: #fffaf5;
@@ -190,7 +310,7 @@ letter-spacing: -8px;
   background-color: #fff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 }
 

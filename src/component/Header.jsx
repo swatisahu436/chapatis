@@ -1,24 +1,22 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom'; // ✅ Correct Hook
+const Header=()=>{
+  return(
+<header className="header">
+  <div className="logo">
+    <h1>GrainWise</h1>
+    <br/>
+    <h4>Tortilla</h4>
+  </div>
+  <nav className="navheader">
+    <ul className="navlink">
+      <li>Home</li>
+      <li>Sustainbility</li>
+      <li>Product</li>
+      <li>Contact Us</li>
+    </ul>
 
-const Header = () => {
-  const navigate = useNavigate(); // ✅ Use this
+  </nav>
 
-  return (
-    <div id="main">
-      <div id="header">
-        <h1>Grains Wraps</h1>
-        <div id="menu">
-          <ul>
-            <li onClick={() => navigate('/')}>Home</li>
-            <li onClick={() => navigate('/order')}>Order</li>
-            <li onClick={() => navigate('/story')}>AboutUs</li>
-            <li onClick={() => navigate('/login')}>Login</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
-};
-
+</header>
+  )
+}
 export default Header;

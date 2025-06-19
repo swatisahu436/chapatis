@@ -1,9 +1,10 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Body from '../src/component/Body';
+import Body from '../src/page/Body';
 import Story from '../src/component/Story';
 import Login from '../src/component/Login';
 import Order from '../src/component/Order';
+import "@fontsource/poppins"; 
 
 function App() {
 
