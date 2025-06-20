@@ -4,6 +4,7 @@ import Header from '../component/Header';
 import GrainWise from "../component/GrainWise";
 import Taste from "../component/Taste";
 import Choose from "../component/Choose";
+import Benefits from '../component/benefits';
 const Body = () => {
   const navigate = useNavigate();
   return (
@@ -13,31 +14,21 @@ const Body = () => {
         <div className='main-content'>
           <div className='main-divide'>
             <div className='main-left'>
-            <h4>
-  Wholesome Tortillas<br />
-  Purely <span id="companyname">Grainwise</span>
-</h4>
-
-              
+              <h4>
+                Wholesome Tortillas<br />
+                Purely <span id="companyname">GrainWise</span>
+              </h4>
             </div>
             <div id="productbutton">
               <button onClick={() => navigate('/story')}>
-                <h4>Our Product !</h4>
+             <p> Our Product!!</p>
               </button>
             </div>
           </div>
-
-          <div className="main-divide">
-            <video id='video' autoPlay muted loop >
-              <source src='/mainvedio.mp4' ></source>
-              vedio should be here
-            </video>
-          </div>
         </div>
       </div>
-      <Choose/>
-      <GrainWise />
-      <Taste />
+      <Choose />
+      <Benefits/>
     </div>
   )
 }

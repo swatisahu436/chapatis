@@ -2,6 +2,10 @@
   font-family: futura;
   src: url('../src/assets/font/Futura-Bold.ttf');
 }
+@font-face{
+  font-family: EduSAHand;
+  src:url('../src/assets/font/Edu_SA_Hand/EduSAHand-VariableFont_wght.ttf') format("truetype");
+}
 
 * {
   margin: 0;
@@ -94,95 +98,64 @@ body {
 /* Header ends */
 
 /* Body  start*/
-#companyname {
-  color:rgb(153, 90, 8);      /* different color */
-  font-weight: 800;    /* bolder */
-  font-style:oblique; /* optional */
-  font-size: 3.6rem;     /* slightly bigger if needed */
-  letter-spacing: 1px; /* optional spacing */
-}
+
 
 .main-content {
   display: flex;
-  flex: 1;
   width: 100vw;
   min-height: auto;
 }
 
 .main-divide {
-  padding: 10rem 2rem 4rem 9rem;
+  margin: 14rem 0rem 4rem 32rem;
 }
-.main-left{
-  padding-top: 8%;
 
-}
 /* Fix this */
 .main-divide h4 {
   color: black;
   padding-left: 2vw;
   text-align: left;
-  font-weight: 900;
-  font-size: 4.5rem;
-  line-height: 5rem;
-  font-family: 'futura';
+  font-weight:bolder;
+  font-size: 5.5rem;
+  line-height: 7.2rem;
+  font-family: 'EduSAHand';
 }
-
-/* Keep flex ONLY for h6 if needed */
-.main-divide h6 {
-  margin-top: 2vh;
-  font-weight: 600;
-  font-size: 2.2vh;
-  line-height: 1.9vh;
-  letter-spacing: -1px;
-  color: black;
-  padding-left: 2vw;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  justify-content: center;
-  align-items: flex-start;
+#companyname {
+  color:rgb(153, 90, 8);      /* different color */
+  font-weight: 800;    /* bolder */
+  font-style:oblique; /* optional */
+  font-size: 7rem;     /* slightly bigger if needed */
+  letter-spacing: 1px; /* optional spacing */
 }
-
-
 #productbutton {
-  margin-top: 4vh;
-  width: 100%;
-  margin-left: 9vw;
+  margin-top: 6vh;
+  margin-left: 32.5%;
+ max-width: 90%;
 }
 
 #productbutton button {
-  min-width: 14vw;
-  justify-items: center;
-  background-color: orangered;
-   border-radius: 8px;
+  min-width: 13vw;
+  height: 6vh;
+  background-color: #393E46;
+   border-color:transparent;
+   border-radius: 7%;
+   justify-content: center;
 }
 
-#productbutton h4 {
-  color: white;
+#productbutton p {
+  color: rgb(252, 252, 252);
   font-size: xx-large;
-  font-family: 'futura';
+  font-family: 'EduSAHand';
   font-weight: 900;
- 
   justify-items: center;
   text-align: center;
   align-items: center;
 }
-
-#video {
-  display: flex;
-  flex: 1;
-  height: 140%;
-  width: 140%;
-  margin-top: -50px;
-  object-fit: cover;
-  border-radius: 4%;
-}
-
 /* body end */
 /* choose us start*/
 .choose-main{
   width: 100vw;
-  min-height: 70vh;
+  max-height: 160vh;
 }
 .choose-div{
   display: inline-flex;
@@ -199,199 +172,78 @@ font-size: 10rem;
 }
 .choose-right{
   flex: 1;
-  padding: 8vh 5vw 0vh 5vw;
+  padding: 5.5vh 5vw 0vh 5vw;
   
 }
 .choose-right p{
   color: #A28B55;
 margin-bottom: 2.8%;
-font-size: 2.4rem;
-  letter-spacing: 3px;
-  font-weight: 900;
+font-size: 2.2rem;
+font-family:'EduSAHand';
+  letter-spacing: 2px;
+  font-weight: 200;
 }
-/* choose us end */
-/* grain wise */
-.grainwise-container {
-  font-family: sans-serif;
-  color: #333;
-  background: white;
-  min-height: 100vh;
-}
-
-.split-image {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 400px;
-}
-
-.split-image img {
+/* /choose end*/
+/* benefits start */
+.benefits-div {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.section-title {
-  color: rgb(68, 255, 0);
-
-  text-align: center;
-  font-size: 4.5rem;
-  margin: 190px 0 30px;
-  font-weight: bold;
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  padding: 0 5% 60px;
-}
-
-.benefit-card {
-  background: #f7f7f7;
-  padding: 24px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: 0.3s ease;
-}
-
-.benefit-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.benefit-icon {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-}
-
-.green {
-  color: #16a34a;
-}
-
-.yellow {
-  color: #facc15;
-}
-
-.blue {
-  color: #3b82f6;
-}
-
-.gray {
-  color: #6b7280;
-}
-
-.taste-goodness-section {
-  background-color: #fffaf5;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #4b2e2e;
-}
-
-.intro-text {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  color: #6a4f4f;
-}
-
-.wrap-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.wrap-card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-}
-
-.wrap-card:hover {
-  transform: scale(1.03);
-}
-
-.wrap-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.wrap-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.wrap-card p {
-  font-size: 1rem;
-  color: #555;
-}
-
-.order-page {
-  padding: 40px;
-  text-align: center;
-  background-color: #fdfdfd;
-  font-family: Arial, sans-serif;
-}
-
-.card-container {
+  height: 98vh;
+  border-radius: 2%;
+  border: 45px solid #A28B55;
   display: flex;
+  flex-direction: column;
+  flex: 1;
   flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  margin-top: 40px;
+  justify-content: space-around;
+  padding: 1% 5% 2% 5%;
 }
 
-.card {
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  padding: 20px;
-  height: 480px;
-  width: 450px;
-  transition: transform 0.2s ease;
+.benefits-left {
+  display: grid;
+  color: #7aa77d;
+  font-weight: 900;
+  font-size: 1.2rem;
+  font-family: 'EduSAHand';
 }
 
-.card:hover {
-  transform: scale(1.05);
+#left {
+  text-align: left;
 }
 
-.card img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 10px;
+#right {
+  text-align: right;
 }
 
-.card h2 {
-  font-size: 1.5rem;
-  margin: 15px 0 10px;
+.benefits-left span {
+  font-size: 290%;
+  line-height: 10rem;
 }
 
-.card p {
-  font-size: 1.4rem;
-  color: #444;
-  margin-bottom: 15px;
+.benefits-right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 50%;
 }
 
-.card button {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  font-size: 1.8rem;
-  border-radius: 6px;
-  cursor: pointer;
+/* 🔄 SCROLL ROTATE EFFECT */
+
+.rotate-roti {
+  width: 58%;
+  max-height: 100%;
+  border-radius: 18% 38%;
+  transition: transform 0.3s ease-out;
+  
 }
 
-.card button:hover {
-  background-color: #218838;
+
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
 }
+
+/* choose us end */
+
+
