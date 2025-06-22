@@ -1,3 +1,4 @@
+@import url('https://fonts.google.com/share?selection.family=Edu+SA+Hand:wght@400..700|Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900');
 @font-face {
   font-family: futura;
   src: url('../src/assets/font/Futura-Bold.ttf');
@@ -6,7 +7,6 @@
   font-family: EduSAHand;
   src:url('../src/assets/font/Edu_SA_Hand/EduSAHand-VariableFont_wght.ttf') format("truetype");
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +17,11 @@ html,
 body {
   height: 100%;
   width: 100%;
+}
+:root{
+  --border-color:#fff5;
+  --w-image:500px;
+  --calculate:calc(3/2);
 }
 
 /* index.css or App.css */
@@ -245,5 +250,55 @@ font-family:'EduSAHand';
 }
 
 /* choose us end */
+/* /product view  start*/
 
+.carousel{
+margin-top: -80px;
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+}
+.carousel .list{
+  height: 100%;
+  position: relative;
+}
+.carousel .list::before{
+  position:absolute;
+  width: var(--w-image);
+  height: 100%;
+  content: '';
+  top: 0;
+  left:calc(100% -calc(var(--w-image)*var(--calculate)));
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  z-index:10;
+  pointer-events: none;
+}
+.carousel .list::after{
+ position: absolute;
+  top: 50px;
+  left: 50px;
+  content: '';
+  background-color: red;
+  width: 400px;
+  height: 300px;
+  z-index: 10;
+  pointer-events: none;
+  border-radius: 20px 50px 110px 230px;
+  filter: blur(150px);
+  opacity: .6;
+}
+.carousel .list .item{
+  postion:}
+.main-content-caru{
+  background-color: rgb(68, 144, 66);
+}
+.main-content-caru2{
+    background-color: rgb(235, 209, 174);
+
+}
+.main-content-caru3{
+    background-color: rgb(240, 153, 66);
+
+}
 

@@ -30,7 +30,7 @@ const Benefits = () => {
       </div>
       <div className="benefits-right">
         <img
-          src="/roti-circel.jpeg"
+          src="/roti-circel.jpg"
           alt="roti not found"
           className="rotate-roti"
           ref={rotiRef}
