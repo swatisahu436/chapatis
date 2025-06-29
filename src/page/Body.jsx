@@ -1,5 +1,4 @@
 import { React } from 'react';
-import {useState,useEffect} from 'react'
 import { useNavigate } from 'react-router-dom';
 import Header from '../component/Header';
 import GrainWise from "../component/GrainWise";
@@ -10,41 +9,40 @@ import Productview from './Productview';
 
 const Body = () => {
   const navigate = useNavigate();
-  const [time,setTime] =useState(new Date());
-
-  useEffect(()=>{
-    const intervalId=setInterval(()=>{
-      setTime(new Date())
-    },1000);
-  },[]);
-   
-
   return (
     <div>
       <div id="main">
         <Header />
         <div className='main-content'>
-          <div className='main-divide'>
-            <div className='main-left'>
+         
+            <div className='main-top'>
               <h4>
-                Wholesome Tortillas<br />
-                Purely <span id="companyname">GrainWise</span>
+                Partner With Us
               </h4>
+            </div>
+            <div className='main-bottom'>
+              <div id="paragraph-home"> <h3>Taste the Future with GrainWise </h3>
+                <p>Imagine a tortilla that's not just delicious, but also good for the planet. That's GrainWise.Let's talk about how we can tailor our tortillas to your precise specifications.
+              </p></div>
             </div>
             <div id="productbutton">
               <button onClick={() => navigate('/story')}>
-             <p> Our Product!!</p>
+                <p> Our Product!!</p>
               </button>
             </div>
-            <div>
-             <h1> {time.toLocalTimeString()}</h1>
-            </div>
-          </div>
+
+       
         </div>
       </div>
       <Choose />
-      <Benefits/>
-      <Productview/>
+      <Benefits />
+     
+      <Productview />
+       <div className="patner">
+        <div className='patner-handshake'><img src='handshake.png'/>  
+              <h3>Partner with GrainWise for Bulk Orders</h3></div>
+        <p>If you're a café/restaurant, food manufacturer, or responsible retailer looking for bulk quantities of high-quality, unique, and sustainable ingredients, you're in the right place. GrainWise tortillas, crafted from upcycled brewers’ spent grain, are perfect for distinguishing your products. We're dedicated to supplying you with the best, precisely sized for your operational needs.</p>
+      </div>
     </div>
   )
 }
